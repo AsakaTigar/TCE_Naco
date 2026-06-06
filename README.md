@@ -13,24 +13,45 @@ NaCo is a framework for naturalistic psychological counseling on consumer electr
 - **CoRA-MCTS** — Chain-of-Thought and Retrieval-Augmented Monte Carlo Tree Search for counselor planning
 - **Progressive-SimPO** — turn-level preference optimization for multi-turn dialogue alignment
 
-This repository provides the **accepted manuscript**, **reproducibility scripts**, and **edge-deployment benchmark artifacts** released with the paper.
+This repository provides the **accepted manuscript**, a **paper-faithful code reconstruction**, reproducibility scripts, and edge-deployment benchmark artifacts.
 
-> **Note:** The original end-to-end training checkpoints and full NaCo-DS / Progressive-SimPO training pipeline are not included in this release. The controlled CoRA-MCTS search-efficiency simulation and edge benchmarks here are self-contained and do not require the original model weights.
+> **Note:** Full-scale reproduction (6,098-session corpus + 8×A100 training) requires GPU time and optional LLM judge APIs. A sanity pipeline and pilot training entrypoints are included for verification.
 
 ## Repository Layout
 
 ```
 TCE_Naco/
+├── naco/                   # Core library (NaCo-DS, CoRA-MCTS, Progressive-SimPO)
+├── scripts/                # Synthesis, training, evaluation, sanity check
+├── configs/                # Paper-aligned hyperparameters
+├── data/                   # Sample sessions, RAG corpus, synthetic outputs
+├── refine-logs/            # Experiment plan (experiment-bridge)
 ├── paper/                  # Accepted manuscript (LaTeX + PDF + figures)
-├── scripts/                # Reproducibility and figure-generation scripts
 ├── reproducibility/        # Precomputed search-efficiency summaries
 ├── edge/                   # Jetson Orin NX benchmark notes and results
+├── tests/                  # Unit tests
 ├── CITATION.bib
 ├── requirements.txt
 └── LICENSE
 ```
 
 ## Quick Start
+
+```bash
+conda activate Aoduo
+cd /mnt/data/AODUOLI/TCE_Naco
+pip install -e .
+python scripts/sanity_check.py
+```
+
+Full pipeline (experiment-bridge order):
+
+```bash
+python scripts/synthesize_corpus.py --input data/raw/sample_sessions.json
+python scripts/build_preferences.py
+python scripts/train_prog_simpo.py --max-steps 20
+python scripts/evaluate_metrics.py --predictions data/synthetic/naco_corpus.json --references data/raw/sample_sessions.json
+```
 
 ### 1. Compile the paper
 

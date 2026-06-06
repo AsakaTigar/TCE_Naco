@@ -1,0 +1,20 @@
+synthesis:
+  max_turns: 8
+  rag_top_k: 3
+  mcts:
+    branching_factor: 4
+    simulations: 8
+    max_depth: 3
+    exploration_c: 1.0
+    expansion_threshold: 2
+    temperature: 0.7
+
+training:
+  base_model: /mnt/data/AODUOLI/models/Qwen2.5-7B-Instruct
+  num_epochs: 3
+  per_device_batch_size: 2
+  learning_rate: 5.0e-5
+  max_length: 8192
+  simpo:
+    beta: 0.1
+    gamma: 0.5

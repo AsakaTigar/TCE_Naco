@@ -1,0 +1,22 @@
+[
+  {
+    "session_id": "demo_001",
+    "source": "demo",
+    "initial_emotion": "anxious, overwhelmed",
+    "traits": "perfectionistic, self-critical",
+    "turns": [
+      {
+        "client": "I feel like I'm never doing enough at work.",
+        "counselor": "It sounds like finishing a task brings relief that quickly turns into dread for the next one."
+      },
+      {
+        "client": "Exactly. My boss says I'm doing great, but I feel like a fraud.",
+        "counselor": "That imposter feeling can be exhausting when praise and self-doubt collide. What does that inner voice sound like?"
+      },
+      {
+        "client": "It sounds like my father. He always said second place is the first loser.",
+        "counselor": "So the pressure at work may be carrying an older family script about never being enough."
+      }
+    ]
+  }
+]
