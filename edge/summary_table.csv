@@ -1,0 +1,6 @@
+run_name,effective_context_limit,mean_ttft_s,mean_total_latency_s,mean_tokens_per_s,peak_ram_mb,mean_power_mw,peak_power_mw,notes
+run_base,base,5.4417,26.2675,3.5533,1572,NA,NA,"2 runs; second run benefited from prompt cache"
+run_ctx_1024,1024,190.1384,207.9144,3.1503,1718,NA,NA,"stable"
+run_ctx_2048,2048,219.1779,238.0063,2.9211,1688,NA,NA,"stable"
+run_ctx_4096,4096,408.8974,426.7513,2.8005,1698,NA,NA,"stable"
+run_ctx_8192,8192,0.4494,22.2637,2.3379,1701,NA,NA,"stable upper-bound check; latency reflects warm-cache continuation"

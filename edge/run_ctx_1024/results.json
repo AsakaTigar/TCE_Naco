@@ -1,0 +1,16 @@
+{
+  "runs": [
+    {
+      "ttft_s": 190.1384,
+      "total_latency_s": 207.9144,
+      "output_tokens_est": 56,
+      "tokens_per_s_est": 3.1503,
+      "output_preview": "I can only imagine how exhausting it must be to feel that way, even when small mistakes seem to define your worth. It sounds like these feelings might be rooted"
+    }
+  ],
+  "mean_ttft_s": 190.1384,
+  "mean_total_latency_s": 207.9144,
+  "mean_tokens_per_s_est": 3.1503,
+  "prompt_chars": 4792,
+  "tegrastats_log": "results_cpu7b/run_ctx_1024/tegrastats.log"
+}

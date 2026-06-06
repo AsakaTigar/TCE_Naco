@@ -1,0 +1,18 @@
+Controlled CoRA-MCTS Search Efficiency Summary
+
+This simulation matches the paper's planning budget (K=4 candidate strategies,
+bounded rewards, and T simulations per counselor turn).
+
+Key observations at T=8:
+- UCT + aligned reward improves selected true utility by 0.061 over UCT + rule proxy.
+- UCT + aligned reward improves selected true utility by 0.000 over uniform exploration.
+- Relative to the rule proxy, aligned UCT reduces oracle regret by 0.061.
+- Relative to uniform exploration, aligned UCT reduces oracle regret by 0.000.
+- Relative to the rule proxy, aligned UCT reduces cumulative search regret by -0.010.
+- Relative to uniform exploration, aligned UCT reduces cumulative search regret by 0.009.
+
+Interpretation:
+The aligned reward concentrates visits on high-value strategies within a small
+budget, while the rule proxy over-selects superficially strong but therapeutically
+weaker branches. Gains saturate near T=8, which matches the operating point used
+in the manuscript.

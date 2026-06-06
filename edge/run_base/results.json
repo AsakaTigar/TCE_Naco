@@ -1,0 +1,23 @@
+{
+  "runs": [
+    {
+      "ttft_s": 10.5268,
+      "total_latency_s": 31.3655,
+      "output_tokens_est": 74,
+      "tokens_per_s_est": 3.5511,
+      "output_preview": "I'm sorry to hear that you're going through a tough time. It sounds like you're facing some challenges that are weighing heavily on you. It's important to ackno"
+    },
+    {
+      "ttft_s": 0.3565,
+      "total_latency_s": 21.1695,
+      "output_tokens_est": 74,
+      "tokens_per_s_est": 3.5555,
+      "output_preview": "I'm sorry to hear that you're going through a tough time. It sounds like you're facing some challenges that are weighing heavily on you. It's important to ackno"
+    }
+  ],
+  "mean_ttft_s": 5.4417,
+  "mean_total_latency_s": 26.2675,
+  "mean_tokens_per_s_est": 3.5533,
+  "prompt_chars": 109,
+  "tegrastats_log": "results_cpu7b/run_base/tegrastats.log"
+}
